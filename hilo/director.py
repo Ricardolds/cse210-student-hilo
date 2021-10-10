@@ -57,6 +57,7 @@ class Director:
         Args:
             self (Director): An instance of Director.
         """
+        
         print(f"\nThe card is: {self.guess.guess[-2]}")
         a = input("Higher or lower? [h/l] ")
         self.guess.guess_.append(a)
@@ -69,6 +70,7 @@ class Director:
         """
         print(f"\nNext card was: {self.guess.guess[-1]}")
         print(f"\nYour score is: {self.score}")
+        print(f"\nNumber of guesses: {self.guess.num_guesses}")
         if self.score > 0:
             choice = input("Roll again? [y/n] ")
             self.keep_playing = (choice == "y")
